@@ -16,7 +16,7 @@ mongoose.model('Shows', ShowSchema);
 Show = mongoose.model("Shows");
 
 
-var mongoDB = "mongodb+srv://robertT:parola1234@cluster0-zknkc.mongodb.net/Tema2?retryWrites=true&w=majority";
+var mongoDB = "";
 mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true  });
 
 const tokenGenerator = function (name, director) {
