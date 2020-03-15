@@ -1,0 +1,15 @@
+<% const spotify = locals.spotify %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if (!spotify) { %>  
+         <p><button onclick="location.href='http://localhost:3000/login'" type="button">Connect</button></p>
+
+  <% } else { %>
+    <img src="<%= spotify.picture %>" alt="avatar" style="width:50%" class = "avatar" >
+    <% } %>
+  </body>
+</html>
