@@ -16,7 +16,7 @@ mongoose.model('Shows', ShowSchema);
 Show = mongoose.model("Shows");
 
 
-var mongoDB = "";
+var mongoDB = "mongodb+srv://robertT:parola1234@cluster0-zknkc.mongodb.net/Tema2?retryWrites=true&w=majority";
 mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true  });
 
 const tokenGenerator = function (name, director) {
@@ -90,7 +90,8 @@ class ShowController {
 
     // PUT /shows/:id
 
-    updateshow (req, res, param, postData) {
+    updateShow (req, res, param, postData) {
+        console.log("ceva")
         postData = JSON.parse(postData);
         let { name, director, actors } = postData;
         var newShow = {

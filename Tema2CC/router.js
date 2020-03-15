@@ -22,7 +22,6 @@ module.exports = async (req, res, routes) => {
     let param = null;
 
     if (route && typeof route.path === 'object') {
-        console.log(req.url.match(route.path))
         param = req.url.match(route.path)[1];
     }
 
